@@ -39,6 +39,9 @@ const handleMockRequest = (config) => {
 
   // Standardize config url - strip base URL if it's there
   let url = config.url || '';
+  if (url.startsWith('https://lead-management-w79i.onrender.com/api')) {
+    url = url.replace('https://lead-management-w79i.onrender.com/api', '');
+  }
   if (url.startsWith('http://localhost:5000/api')) {
     url = url.replace('http://localhost:5000/api', '');
   }
@@ -262,7 +265,7 @@ const handleMockRequest = (config) => {
 };
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://lead-management-w79i.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
   adapter: async (config) => {
     const isMock = localStorage.getItem('mock_mode') === 'true' || 
