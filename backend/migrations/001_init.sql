@@ -56,9 +56,9 @@ CREATE INDEX IF NOT EXISTS idx_activity_logs_lead ON activity_logs(lead_id);
 -- Hash: $2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
 -- ============================================================
 INSERT INTO users (name, email, password_hash, role) VALUES
-    ('Admin User',   'admin@test.com',   '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'admin'),
-    ('Manager User', 'manager@test.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'manager'),
-    ('Agent One',    'agent1@test.com',  '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'agent'),
-    ('Agent Two',    'agent2@test.com',  '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'agent'),
-    ('Agent Three',  'agent3@test.com',  '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'agent')
+    ('Admin User',   'admin@test.com',   '$2a$10$ueVIqgtIhWv5R7t7.TTCc.LvEoSnzkwth3B1yVGmol99WPjaMdPtO', 'admin'),
+    ('Manager User', 'manager@test.com', '$2a$10$ueVIqgtIhWv5R7t7.TTCc.LvEoSnzkwth3B1yVGmol99WPjaMdPtO', 'manager'),
+    ('Agent One',    'agent1@test.com',  '$2a$10$ueVIqgtIhWv5R7t7.TTCc.LvEoSnzkwth3B1yVGmol99WPjaMdPtO', 'agent'),
+    ('Agent Two',    'agent2@test.com',  '$2a$10$ueVIqgtIhWv5R7t7.TTCc.LvEoSnzkwth3B1yVGmol99WPjaMdPtO', 'agent'),
+    ('Agent Three',  'agent3@test.com',  '$2a$10$ueVIqgtIhWv5R7t7.TTCc.LvEoSnzkwth3B1yVGmol99WPjaMdPtO', 'agent')
 ON CONFLICT (email) DO NOTHING;
