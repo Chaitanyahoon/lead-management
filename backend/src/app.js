@@ -15,6 +15,9 @@ const activityRoutes = require('./modules/activity/activity.routes');
 
 const app = express();
 
+// Trust Render's reverse proxy for correct client IP rate limiting
+app.set('trust proxy', 1);
+
 // ── Core middleware ─────────────────────────────────────────
 app.use(helmet({
   contentSecurityPolicy: false, // disable CSP to avoid blocking Swagger UI assets in development
