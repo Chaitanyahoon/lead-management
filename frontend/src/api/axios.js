@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const defaultAdapter = axios.defaults.adapter;
+const defaultAdapter = axios.getAdapter(axios.defaults.adapter);
 
 const getBaseURL = () => {
   let url = import.meta.env.VITE_API_URL || 'https://lead-management-w79i.onrender.com/api';
