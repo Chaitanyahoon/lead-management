@@ -90,7 +90,7 @@ export default function Dashboard() {
           {/* By Source */}
           <div className="col-md-6">
             <div className="card border-0 shadow-sm h-100">
-              <div className="card-header bg-white fw-semibold border-bottom-0 pt-3">
+              <div className="card-header fw-semibold border-bottom-0 pt-3">
                 <i className="bi bi-bar-chart me-2"></i>Leads by Source
               </div>
               <div className="card-body pt-0">
@@ -113,7 +113,7 @@ export default function Dashboard() {
           {/* Agent Load */}
           <div className="col-md-6">
             <div className="card border-0 shadow-sm h-100">
-              <div className="card-header bg-white fw-semibold border-bottom-0 pt-3">
+              <div className="card-header fw-semibold border-bottom-0 pt-3">
                 <i className="bi bi-person-workspace me-2"></i>Agent Workload
               </div>
               <div className="card-body pt-0">
@@ -143,7 +143,7 @@ export default function Dashboard() {
       {/* Status breakdown bar */}
       {stats && stats.total > 0 && (
         <div className="card border-0 shadow-sm mt-3">
-          <div className="card-header bg-white fw-semibold border-bottom-0 pt-3">
+          <div className="card-header fw-semibold border-bottom-0 pt-3">
             <i className="bi bi-pie-chart me-2"></i>Pipeline Overview
           </div>
           <div className="card-body">

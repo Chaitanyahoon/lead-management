@@ -62,14 +62,14 @@ export default function Login() {
   };
 
   return (
-    <div className="min-vh-100 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#f8fafc' }}>
+    <div className="min-vh-100 d-flex align-items-center justify-content-center" style={{ backgroundColor: 'var(--bg-app)' }}>
       <div className="card shadow-sm border-0" style={{ maxWidth: '400px', width: '100%', borderRadius: '16px' }}>
         <div className="card-body p-4 p-md-5">
           <div className="text-center mb-4">
             <div className="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-3" style={{ width: '56px', height: '56px' }}>
               <i className="bi bi-funnel-fill fs-3"></i>
             </div>
-            <h4 className="fw-bold text-dark mb-1">LeadFlow</h4>
+            <h4 className="fw-bold mb-1">LeadFlow</h4>
             <p className="text-muted small">Modern Sales Pipeline & Assignment</p>
           </div>
 

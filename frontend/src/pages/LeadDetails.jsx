@@ -100,7 +100,7 @@ export default function LeadDetails() {
         {/* Lead Info */}
         <div className="col-lg-6">
           <div className="card border-0 shadow-sm h-100">
-            <div className="card-header bg-white fw-semibold border-bottom-0 pt-3">
+            <div className="card-header fw-semibold border-bottom-0 pt-3">
               <i className="bi bi-info-circle me-2"></i>Lead Information
             </div>
             <div className="card-body">
@@ -146,7 +146,7 @@ export default function LeadDetails() {
               </table>
 
               {lead.notes && (
-                <div className="mt-3 p-3 bg-light rounded">
+                <div className="mt-3 p-3 rounded" style={{ backgroundColor: 'var(--bg-app)', border: '1px solid var(--border-color)' }}>
                   <strong className="d-block mb-1">Notes</strong>
                   <p className="mb-0 text-muted" style={{ whiteSpace: 'pre-wrap' }}>{lead.notes}</p>
                 </div>
@@ -158,7 +158,7 @@ export default function LeadDetails() {
         {/* Activity Timeline */}
         <div className="col-lg-6">
           <div className="card border-0 shadow-sm h-100">
-            <div className="card-header bg-white fw-semibold border-bottom-0 pt-3">
+            <div className="card-header fw-semibold border-bottom-0 pt-3">
               <i className="bi bi-clock-history me-2"></i>Activity Timeline
             </div>
             <div className="card-body" style={{ maxHeight: 500, overflowY: 'auto' }}>
@@ -221,7 +221,7 @@ export default function LeadDetails() {
                   <div className="text-danger mb-3">
                     <i className="bi bi-exclamation-triangle-fill fs-1"></i>
                   </div>
-                  <h5 className="fw-bold text-dark mb-1">Delete Lead</h5>
+                  <h5 className="fw-bold mb-1">Delete Lead</h5>
                   <p className="text-muted small mb-4">
                     Are you sure you want to delete <strong>{lead.name}</strong>? This action is permanent.
                   </p>

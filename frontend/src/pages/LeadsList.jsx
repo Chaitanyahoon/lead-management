@@ -252,7 +252,7 @@ export default function LeadsList() {
                   <div className="text-danger mb-3">
                     <i className="bi bi-exclamation-triangle-fill fs-1"></i>
                   </div>
-                  <h5 className="fw-bold text-dark mb-1">Delete Lead</h5>
+                  <h5 className="fw-bold mb-1">Delete Lead</h5>
                   <p className="text-muted small mb-4">
                     Are you sure you want to delete <strong>{deleteConfirmName}</strong>? This action is permanent.
                   </p>
