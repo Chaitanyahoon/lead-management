@@ -36,12 +36,20 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
+  color: var(--text-main);
   transition: all 0.2s ease;
 }
 
 .card.hover-lift:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.05);
+}
+
+/* List Group Item Theme Support */
+.list-group-item {
+  background-color: transparent !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
 }
 
 /* Modern inputs */
