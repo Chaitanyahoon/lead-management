@@ -292,6 +292,8 @@ const API = axios.create({
   }
 });
 
+console.log('🔌 LeadFlow API Base URL:', API.defaults.baseURL);
+
 // Attach JWT token to every request
 API.interceptors.request.use(
   (config) => {
