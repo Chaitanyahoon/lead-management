@@ -21,6 +21,7 @@ app.set('trust proxy', 1);
 // ── Core middleware ─────────────────────────────────────────
 app.use(helmet({
   contentSecurityPolicy: false, // disable CSP to avoid blocking Swagger UI assets in development
+  crossOriginResourcePolicy: { policy: 'cross-origin' },
 }));
 app.use(cors());
 app.use(express.json());
