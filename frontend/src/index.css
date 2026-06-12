@@ -52,6 +52,20 @@ body {
   border-color: var(--border-color) !important;
 }
 
+/* Card Header Theme Support */
+.card-header {
+  background-color: transparent !important;
+  color: var(--text-main) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Modal Content Theme Support */
+.modal-content {
+  background-color: var(--card-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
 /* Modern inputs */
 .form-control, .form-select {
   background-color: var(--card-bg);
