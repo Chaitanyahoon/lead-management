@@ -265,7 +265,8 @@ const API = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
   headers: { 'Content-Type': 'application/json' },
   adapter: async (config) => {
-    const isMock = localStorage.getItem('mock_mode') === 'true' || localStorage.getItem('token')?.startsWith('mock-token');
+    const isMock = localStorage.getItem('mock_mode') === 'true' || 
+                   (!config.url.includes('/auth/login') && localStorage.getItem('token')?.startsWith('mock-token'));
     if (isMock) {
       await new Promise(r => setTimeout(r, 200)); // smooth minimal simulation delay
       try {
