@@ -2,6 +2,19 @@ import axios from 'axios';
 
 const defaultAdapter = axios.defaults.adapter;
 
+const getBaseURL = () => {
+  let url = import.meta.env.VITE_API_URL || 'https://lead-management-w79i.onrender.com/api';
+  if (url.endsWith('/')) {
+    url = url.slice(0, -1);
+  }
+  if (!url.endsWith('/api')) {
+    url = url + '/api';
+  }
+  return url;
+};
+
+const baseURL = getBaseURL();
+
 const initMockDB = () => {
   if (!localStorage.getItem('mock_users')) {
     localStorage.setItem('mock_users', JSON.stringify([
@@ -39,8 +52,8 @@ const handleMockRequest = (config) => {
 
   // Standardize config url - strip base URL if it's there
   let url = config.url || '';
-  if (url.startsWith('https://lead-management-w79i.onrender.com/api')) {
-    url = url.replace('https://lead-management-w79i.onrender.com/api', '');
+  if (url.startsWith(baseURL)) {
+    url = url.replace(baseURL, '');
   }
   if (url.startsWith('http://localhost:5000/api')) {
     url = url.replace('http://localhost:5000/api', '');
