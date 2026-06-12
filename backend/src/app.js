@@ -32,6 +32,11 @@ app.use('/api/auth', authLimiter);
 // ── Swagger UI (no auth required) ───────────────────────────
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+// ── Root welcome handler ────────────────────────────────────
+app.get('/', (_req, res) => {
+  res.json({ success: true, message: 'Welcome to the LeadFlow CRM API Server 🚀' });
+});
+
 // ── Health check ────────────────────────────────────────────
 app.get('/api/health', (_req, res) => {
   res.json({ success: true, message: 'API is running 🚀' });
